@@ -6,14 +6,16 @@
  *@n: The accumulated height.
  *@height: A pointer to the maximum height in the node's tree.
  */
-void node_height(const binary_tree_t *tree, size_t n, size_t *height)
+void
+node_height(const binary_tree_t *tree, size_t n, size_t *height)
 {
 	if (tree != NULL)
 	{
 		if ((tree->left == NULL) && (tree->right == NULL))
 		{
 			if (n > *height)
-			{ 	*height = n;
+			{
+				*height = n;
 			}
 		}
 		else
@@ -30,7 +32,8 @@ void node_height(const binary_tree_t *tree, size_t n, size_t *height)
  *
  *Return: The height of the given binary tree.
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+size_t
+binary_tree_height(const binary_tree_t *tree)
 {
 	size_t height = 0;
 
